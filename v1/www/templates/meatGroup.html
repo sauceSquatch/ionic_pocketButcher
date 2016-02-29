@@ -1,0 +1,14 @@
+<ion-view title="{{meatGroup.name}}">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <ion-list>
+        <p>{{meatGroup.name}}</p>
+
+         <ion-item ng-repeat="cut in meatGroup.cuts" ui-sref="meatDetail({id:cut.urlName})">
+           <!-- <a href="#/{{meatType.name}}" class="button button-dark button-block">{{meatType.name}}</a> -->
+           <b>{{cut.name}}</b><br>
+           {{cut.urlName}}
+           <p>{{cut.desc}}</p>
+         </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
